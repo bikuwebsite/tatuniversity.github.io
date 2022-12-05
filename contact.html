@@ -1,0 +1,132 @@
+<!-- <?php
+//php code to sent contact form to both client and owner
+// if(isset($_POST['submit'])){
+//     $mailto= "bikashsahoo548@gmail.com";
+//     $from= $_POST['email'];
+//     $name= $_POST['name'];
+//     $subject= $_POST['subject'];
+//     $subject2= "Your message submitted successfully";
+//     $message= "Name: ". $name. ",Wrote the following message"."\n\n". $_POST['message'];
+//     $message2= "Dear ".$name. "\n\n" ."Thank you for contacting us!We'll get back to you shortly";
+//     $headers = "From: ". $from;
+//     $headers2 = "From: ". $mailto;
+//     $result = mail($mailto, $subject, $message, $headers);
+//     $result2 = mail($from, $subject2, $message2, $headers2);
+//     if($result){
+//         echo '<script type="text/javascript">alert("Message sent. Thank you! We will contact you shortly.") </script>';
+//     }else{
+//         echo '<script type="text/javascript">alert("Submission failed! Try again later") </script>';
+//     }
+// }
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/95a260593d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <!-- for cross icon  -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- for menu bar -->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+<!-- contact us -->
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.968888773348!2d85.80464420927164!3d20.34290388106167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908e285d3747b%3A0x2a1b91dde2df954b!2sInfocity%20Square!5e0!3m2!1sen!2sin!4v1669999631428!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>Infocity Square,Infocity cave</h5>
+                    <p>Patia,Bhubaneswar,Odisha,751024</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>+91 0125487523</h5>
+                    <p>Monday to Friday,10AM-6PM</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                    <h5>biku@blpvtltd.com</h5>
+                    <p>Email Us your query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="index.php" method="post">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter email address" required>
+                <input type="text" name="subject" placeholder="Enter your subject" required>
+                <textarea rows="6" name="message" placeholder="Message"></textarea>
+                <button type="submit" name="submit" class="btn btn1">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    <!-- footer -->
+    <section class="footer">
+        <h3>About us</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem pariatur, <br>
+            quam quia eum debitis et veniam eos? Autem, voluptatum magnam nemo iusto error obcaecati?</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> By Bikash Sahoo</p>
+    </section>
+
+
+
+    <!-- Javascript for our menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
